@@ -29,15 +29,22 @@
 		$('[action="nav"] span:eq(' + nextSlide + ')').trigger('click');
 	});
 
-	$('[action="nav"] > span').on('click', function() {
+	var $nav = $('[action="nav"] > span'),
+		$navSkip = $('[action="nav"] > span[param="add"]');
+	
+	$nav.on('click', function() {
 		var $this = $(this);
 		
+		if($nav.index(this) > $nav.index($navSkip)) {
+			
+		}
+
 		$this.parents('nav').find('span > div').show();
 		$this.find('> div').hide();
 	});
 
-	$('[action="nav"] > span[param="add"]').on('click', function() {
-		
+	$navSkip.on('click', function() {
+
 	});
 
 })();

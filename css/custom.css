@@ -5,6 +5,12 @@
 #page-content-wrapper .container-fluid .row .col-lg-12 { 
   height: 100%; 
 }
+#nav-dots {
+  top: 97%;
+}
+#slider {
+  height: 94%;
+}
 #wrapper { 
   height: 100%; 
   position: absolute; 
@@ -128,7 +134,19 @@
   text-transform: none;
 }
 .demo-1 .sl-slide ul {
+  bottom: 35%;
+  color: #8b8b8b;
+  font-size: 14px;
+  font-weight: 400;
+  height: 50%;
+  left: 0;
+  line-height: 20px;
+  margin: 0 0 -200px 0;
   padding: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 2;
 }
   .demo-1 .sl-slide ul li {
     list-style: none;
@@ -154,20 +172,11 @@
         color: #fff; 
       }
 .demo-1 .sl-slide .inner-content {
-  bottom: 35%;
-  color: #8b8b8b;
-  font-size: 14px;
-  font-weight: 400;
-  height: 50%;
-  left: 0;
-  line-height: 20px;
-  margin: 0 0 -200px 0;
+  height: 100%;
+  overflow: hidden;
   overflow-y: scroll;
-  padding: 0;
   position: absolute;
-  text-align: center;
   width: 100%;
-  z-index: 2;
 }
 .sl-trans-elems ul {
   animation: fadeIn 0.5s linear 0.5s both;
