@@ -96,25 +96,16 @@
   margin: 0 0 0 -80px;
   width: 160px;
 }
+.demo-1 .sl-slide blockquote {
+  top: 50%;
+}
 .demo-1 .sl-slide h2 {
   bottom: 81%;
   letter-spacing: 1px;
   text-transform: none;
 }
 .demo-1 .sl-slide ul {
-  bottom: 75%;
-  color: #8b8b8b;
-  font-size: 14px;
-  font-weight: 400;
-  height: 70px;
-  left: 0;
-  line-height: 20px;
-  margin: 0 0 -200px 0;
   padding: 0;
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  z-index: 2;
 }
   .demo-1 .sl-slide ul li {
     list-style: none;
@@ -139,6 +130,22 @@
         border-color: #566473;
         color: #fff; 
       }
+.demo-1 .sl-slide .inner-content {
+  bottom: 35%;
+  color: #8b8b8b;
+  font-size: 14px;
+  font-weight: 400;
+  height: 50%;
+  left: 0;
+  line-height: 20px;
+  margin: 0 0 -200px 0;
+  overflow-y: scroll;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+}
 .sl-trans-elems ul {
   animation: fadeIn 0.5s linear 0.5s both;
 }
