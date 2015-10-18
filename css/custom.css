@@ -13,8 +13,19 @@
 }
 #wrapper { 
   height: 100%; 
+  padding-right: 300px;
   position: absolute; 
   width: 100%; 
+}
+
+#pagebar-wrapper {
+  background-color: #fafafa;
+  height: calc(100% - 40px);
+  margin-top: 20px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 300px;
 }
 
 
