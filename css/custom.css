@@ -14,36 +14,72 @@
 
 /* Navigations */
 #nav-dots > span > div {
-  opacity: 0;
+  border-radius: 50%;
+  max-height: 16px;
+  opacity: 0.5;
+  overflow: hidden;
   position: absolute; 
-  transform: translateX(-50%) translateY(-105%) rotateX(-90deg); 
-  transform-origin: 0 100%;
-  transition: all 0.2s ease-out 0.2s;
+  transform: translateX(0%) translateY(0%);
+  /*transform-origin: 100%;*/
+  /*transition: all 0.1s ease-out 0.1s;*/
+  max-width: 16px;
+  min-width: 16px;
+}
+  #nav-dots > span:hover > div { 
+    border-radius: 0;
+    margin: 0 -100px -100px -100px;
+    max-height: 500px;
+    opacity: 1;
+    overflow: none;
+    max-width: 200px;
+    min-width: 200px;
+    transform: translateY(calc(-100% - 10px));
+  }
+#nav-dots > span > div h3 {
+  /*opacity: 0;*/
+  transform: rotateX(-90deg);
+  transform-origin: 100% 0;
+  transition: all 0.1s ease-in 0.1s, opacity 0.1ms;
+  transition-delay: 0.1s;
   width: 200px;
 }
-  #nav-dots > span:first-child {
-    margin-right: 25px;
+  #nav-dots > span:hover > div h3 {
+    /*opacity: 1;*/
+    transform: rotateX(0deg);
   }
-  #nav-dots > span:hover > div { 
-    opacity: 1;
-    transform: translateX(-50%) translateY(-105%) rotateX(0deg);
+#nav-dots > span .nav-image {
+  /*backface-visibility: hidden;*/
+  background-position: 50%;
+  background-size: cover;
+  height: 92px;
+  transform: rotateX(90deg);
+  transform-origin: 0 100%;
+  transition: all 0.1s ease-in 0.1s;
+  /*transition-delay: 0.4s;*/
+  width: 100%;
+}
+  #nav-dots .nav-image.load {
+    transform: rotateX(0deg);
   }
-  #nav-dots > span:nth-last-child(2) {
-    margin-left: 25px;
-  }
-  #nav-dots > span.nav-dot-current > div {
-    display: none;
-  }
-  #nav-dots > span.nav-plus:after {
-    color: #fff;
-    content: '+';
-    font-size: 16px;
-    font-weight: bold;
-    left: 3px;
-    opacity: 0.8;
-    position: absolute;
-    top: -5px;
-  }
+#nav-dots > span:first-child {
+  margin-right: 25px;
+}
+#nav-dots > span:nth-last-child(2) {
+  margin-left: 25px;
+}
+#nav-dots > span.nav-dot-current > div {
+  display: none;
+}
+#nav-dots > span.nav-plus:after {
+  color: #fff;
+  content: '+';
+  font-size: 16px;
+  font-weight: bold;
+  left: 3px;
+  opacity: 0.8;
+  position: absolute;
+  top: -5px;
+}
 
 #nav-dots div > img { 
   max-width: 200px; 
@@ -63,19 +99,6 @@
     display: block;  
     line-height: 2;
     font-size: 65%; 
-  }
-#nav-dots .nav-image {
-  backface-visibility: hidden;
-  background-position: 50%;
-  background-size: cover;
-  height: 92px;
-  transform: rotateX(90deg);
-  transform-origin: 0 100%;
-  transition: all 0.2s ease-in 0.2s;
-  width: 100%;
-}
-  #nav-dots .nav-image.load {
-    transform: rotateX(0deg);
   }
 
 
