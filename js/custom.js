@@ -16,13 +16,6 @@
 		}
 	});
 
-	$('[action="nav"] > span').on('click', function() {
-		var $this = $(this);
-		
-		$this.parents('nav').find('span > div').show();
-		$this.find('> div').hide();
-	});
-
 	$('[action="answer"] a').on('click', function() {
 		var nextSlide = $(this).parents('.sl-slide').index();
 		if(++nextSlide + 1 > slideTotal) {
@@ -34,6 +27,17 @@
 			.addClass('selected');
 		
 		$('[action="nav"] span:eq(' + nextSlide + ')').trigger('click');
+	});
+
+	$('[action="nav"] > span').on('click', function() {
+		var $this = $(this);
+		
+		$this.parents('nav').find('span > div').show();
+		$this.find('> div').hide();
+	});
+
+	$('[action="nav"] > span[param="add"]').on('click', function() {
+		
 	});
 
 })();

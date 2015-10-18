@@ -89,6 +89,13 @@
                             <div id="slider" class="sl-slider-wrapper">
 
                                 <div class="sl-slider">
+                                    
+                                    <div class="sl-slide bg-0" data-orientation="vertical" data-slice1-rotation="-5" data-slice2-rotation="25" data-slice1-scale="2" data-slice2-scale="1">
+                                        <div class="sl-slide-inner">
+                                            <h2>An inturo parteno</h2>
+                                            <blockquote><p>The human body has no more need for cows' milk than it does for dogs' milk, horses' milk, or giraffes' milk.</p><cite>Michael Klaper M.D.</cite></blockquote>
+                                        </div>
+                                    </div>
                                 
                                     <div class="sl-slide bg-1" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
                                         <div class="sl-slide-inner">
@@ -168,7 +175,8 @@
                                 </nav> -->
 
                                 <nav id="nav-dots" class="nav-dots" action="nav">
-                                    <span class="nav-dot-current">
+                                    <span class="nav-dot-current"></span>
+                                    <span>
                                         <div>
                                             <div class="nav-image" data-image="http://static.boredpanda.com/blog/wp-content/uuuploads/landscape-photography/landscape-photography-15.jpg" init="bgImg"></div>
                                             <h3>Nothing to Loose <em>by Zach Wallis</em></h3>
@@ -198,6 +206,9 @@
                                             <h3>The Church of The Good Shepherd <em>by AtomicZen</em></h3>
                                         </div>
                                     </span>
+                                    <span class="nav-plus" param="add"></span>
+                                    <span></span>
+                                    <span></span>
                                 </nav>
 
                             </div><!-- /slider-wrapper -->
@@ -221,7 +232,7 @@
     <!-- SlitSlider -->
     <script type="text/javascript" src="plugins/SLitSlider/js/modernizr.custom.79639.js"></script>
     <script src="plugins/SLitSlider/js/jquery.ba-cond.min.js"></script>
-    <script src="plugins/SlitSlider/js/jquery.slitslider.js"></script><script src="js/custom.js"></script>
+    <script src="plugins/SlitSlider/js/jquery.slitslider.js"></script>
     <script>
         $(function() {
             
@@ -241,6 +252,7 @@
                         init = function() {
 
                             initEvents();
+                            slitslider.jump( $( '#nav-dots > span' ).index( $('#nav-dots > span.nav-dot-current') ) + 1 );
                             
                         },
                         initEvents = function() {
@@ -261,7 +273,11 @@
                             } );
 
                             $nav.each( function( i ) {
-                            
+
+                                if( $( this ).hasClass('nav-plus') ) {
+                                    return true;
+                                }
+
                                 $( this ).on( 'click', function( event ) {
                                     
                                     var $dot = $( this );
@@ -305,6 +321,7 @@
             
             });
     </script>
+    <script src="js/custom.js"></script>
 
     <!-- Menu Toggle Script -->
     <script>
@@ -312,7 +329,7 @@
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
-    </script><script src="js/custom.js"></script>
+    </script>
 
 </body>
 
