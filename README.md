@@ -1,3 +1,3 @@
 # project
 
-Template admin using slit slider.
+Page template using slit slider, with sidebar.
